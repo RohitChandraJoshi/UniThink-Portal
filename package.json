@@ -31,6 +31,7 @@
     "styled-component": "^2.8.0"
   },
   "devDependencies": {
+    "@itsy/vite-css-inject": "^1.0.2",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.3.0",

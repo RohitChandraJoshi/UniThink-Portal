@@ -12,7 +12,7 @@ import counsellingImage from 'G:/Projects/Unithink/Unithink-main/Unithink-main/C
 import skillingImage from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/about2.png';
 import admissionImage from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/about3.png';
 import '../components/BookNow.css';
-import Counselling from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/counselling.jpg'
+import Counsellingimg from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/counselling.jpg'
 import course2 from '../assets/course-2.jpg'
 import course3 from '../assets/course-3.jpg'
 import rotated from '../assets/rotated.png'

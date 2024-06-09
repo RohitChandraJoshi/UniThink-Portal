@@ -2,62 +2,52 @@ import React, { useState } from 'react';
 import { BsEmojiSmile, BsEmojiFrown } from 'react-icons/bs';
 
 const quizQuestions = [
+
   {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Madrid", "Paris", "Lisbon"],
-    answer: "Paris"
-  },
-  {
-    question: "What is 2 + 2?",
-    options: ["3", "4", "5", "6"],
-    answer: "4"
-  },
-  // Add more questions here...
-  {
-    question: "True or False: The Great Wall of China is visible from space.",
+    question: "The Great Wall of China is visible from space.",
     options: ["True", "False"],
     answer: "False"
   },
   {
-    question: "True or False: Australia is both a country and a continent.",
+    question: "Australia is both a country and a continent.",
     options: ["True", "False"],
     answer: "True"
   },
   {
-    question: "True or False: The Amazon Rainforest produces 20% of the world's oxygen.",
+    question: "The Amazon Rainforest produces 20% of the world's oxygen.",
     options: ["True", "False"],
     answer: "True"
   },
   {
-    question: "True or False: Mount Everest is located in Nepal.",
+    question: "Mount Everest is located in Nepal.",
     options: ["True", "False"],
     answer: "True"
   },
   {
-    question: "True or False: The currency of Japan is the Yuan.",
+    question: "TThe currency of Japan is the Yuan.",
     options: ["True", "False"],
     answer: "False"
   },
-  {
-    question: "True or False: Africa is the largest continent by land area.",
-    options: ["True", "False"],
-    answer: "False"
-  },
-  {
-    question: "True or False: The Sahara Desert is the largest desert in the world.",
-    options: ["True", "False"],
-    answer: "False"
-  },
-  {
-    question: "True or False: The United States declared its independence in 1776.",
-    options: ["True", "False"],
-    answer: "True"
-  },
-  {
-    question: "True or False: There are 7 continents in the world.",
-    options: ["True", "False"],
-    answer: "True"
-  },
+  // {
+  //   question: "True or False: Africa is the largest continent by land area.",
+  //   options: ["True", "False"],
+  //   answer: "False"
+  // },
+  // {
+  //   question: "True or False: The Sahara Desert is the largest desert in the world.",
+  //   options: ["True", "False"],
+  //   answer: "False"
+  // },
+  // {
+  //   question: "True or False: The United States declared its independence in 1776.",
+  //   options: ["True", "False"],
+  //   answer: "True"
+  // },
+  // {
+  //   question: "True or False: There are 7 continents in the world.",
+  //   options: ["True", "False"],
+  //   answer: "True"
+  // },
   {
     question: "Which country has the most natural lakes?",
     options: ["A. Canada", "B. Brazil", "C. Russia", "D. United States"],
@@ -83,66 +73,66 @@ const quizQuestions = [
     options: ["A. 1905", "B. 1910", "C. 1912", "D. 1915"],
     answer: "C. 1912"
   },
-  {
-    question: "Which river is the longest in the world?",
-    options: ["A. Amazon River", "B. Nile River", "C. Yangtze River", "D. Mississippi River"],
-    answer: "B. Nile River"
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: ["A. Venus", "B. Mars", "C. Jupiter", "D. Saturn"],
-    answer: "B. Mars"
-  },
-  {
-    question: "What is the tallest mountain in the world?",
-    options: ["A. K2", "B. Kangchenjunga", "C. Mount Everest", "D. Lhotse"],
-    answer: "C. Mount Everest"
-  },
-  {
-    question: "Which ocean is the largest by surface area?",
-    options: ["A. Atlantic Ocean", "B. Indian Ocean", "C. Arctic Ocean", "D. Pacific Ocean"],
-    answer: "D. Pacific Ocean"
-  },
-  {
-    question: "Which country is known for the Eiffel Tower?",
-    options: ["A. Germany", "B. Italy", "C. France", "D. Spain"],
-    answer: "C. France"
-  },
-  {
-    question: "Which city is known as the Big Apple?",
-    options: ["A. Los Angeles", "B. New York City", "C. Chicago", "D. San Francisco"],
-    answer: "B. New York City"
-  },
-  {
-    question: "What is the most widely spoken language in the world?",
-    options: ["A. Spanish", "B. English", "C. Mandarin Chinese", "D. Hindi"],
-    answer: "C. Mandarin Chinese"
-  },
-  {
-    question: "Which continent is the Sahara Desert located on?",
-    options: ["A. Asia", "B. South America", "C. Africa", "D. Australia"],
-    answer: "C. Africa"
-  },
-  {
-    question: "What is the largest island in the world?",
-    options: ["A. Greenland", "B. New Guinea", "C. Borneo", "D. Madagascar"],
-    answer: "A. Greenland"
-  },
-  {
-    question: "Which country is known for the kangaroo?",
-    options: ["A. India", "B. South Africa", "C. Australia", "D. Brazil"],
-    answer: "C. Australia"
-  },
-  {
-    question: "What is the capital of Canada?",
-    options: ["A. Toronto", "B. Vancouver", "C. Ottawa", "D. Montreal"],
-    answer: "C. Ottawa"
-  },
-  {
-    question: "Which country has the most populous city in the world?",
-    options: ["A. India", "B. China", "C. Japan", "D. United States"],
-    answer: "C. Japan (Tokyo)"
-  },
+  // {
+  //   question: "Which river is the longest in the world?",
+  //   options: ["A. Amazon River", "B. Nile River", "C. Yangtze River", "D. Mississippi River"],
+  //   answer: "B. Nile River"
+  // },
+  // {
+  //   question: "Which planet is known as the Red Planet?",
+  //   options: ["A. Venus", "B. Mars", "C. Jupiter", "D. Saturn"],
+  //   answer: "B. Mars"
+  // },
+  // {
+  //   question: "What is the tallest mountain in the world?",
+  //   options: ["A. K2", "B. Kangchenjunga", "C. Mount Everest", "D. Lhotse"],
+  //   answer: "C. Mount Everest"
+  // },
+  // {
+  //   question: "Which ocean is the largest by surface area?",
+  //   options: ["A. Atlantic Ocean", "B. Indian Ocean", "C. Arctic Ocean", "D. Pacific Ocean"],
+  //   answer: "D. Pacific Ocean"
+  // },
+  // {
+  //   question: "Which country is known for the Eiffel Tower?",
+  //   options: ["A. Germany", "B. Italy", "C. France", "D. Spain"],
+  //   answer: "C. France"
+  // },
+  // {
+  //   question: "Which city is known as the Big Apple?",
+  //   options: ["A. Los Angeles", "B. New York City", "C. Chicago", "D. San Francisco"],
+  //   answer: "B. New York City"
+  // },
+  // {
+  //   question: "What is the most widely spoken language in the world?",
+  //   options: ["A. Spanish", "B. English", "C. Mandarin Chinese", "D. Hindi"],
+  //   answer: "C. Mandarin Chinese"
+  // },
+  // {
+  //   question: "Which continent is the Sahara Desert located on?",
+  //   options: ["A. Asia", "B. South America", "C. Africa", "D. Australia"],
+  //   answer: "C. Africa"
+  // },
+  // {
+  //   question: "What is the largest island in the world?",
+  //   options: ["A. Greenland", "B. New Guinea", "C. Borneo", "D. Madagascar"],
+  //   answer: "A. Greenland"
+  // },
+  // {
+  //   question: "Which country is known for the kangaroo?",
+  //   options: ["A. India", "B. South Africa", "C. Australia", "D. Brazil"],
+  //   answer: "C. Australia"
+  // },
+  // {
+  //   question: "What is the capital of Canada?",
+  //   options: ["A. Toronto", "B. Vancouver", "C. Ottawa", "D. Montreal"],
+  //   answer: "C. Ottawa"
+  // },
+  // {
+  //   question: "Which country has the most populous city in the world?",
+  //   options: ["A. India", "B. China", "C. Japan", "D. United States"],
+  //   answer: "C. Japan (Tokyo)"
+  // },
   // Add more questions as needed
 ];
 

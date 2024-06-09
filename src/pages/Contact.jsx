@@ -162,7 +162,7 @@ function Contact() {
               className="mr-2"
             />
             <label htmlFor="agreeTerms" className="text-sm">
-              I agree to Unithink Terms <a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="#" className="text-blue-500">privacy policy</a>
+              I agree to Unithink Terms <a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="/privacypolicy" className="text-blue-500">privacy policy</a>
             </label>
           </div>
           <div className="flex items-center">

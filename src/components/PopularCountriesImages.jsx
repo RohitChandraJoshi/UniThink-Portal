@@ -73,7 +73,7 @@ function PopularCountriesImages() {
                 </iframe>
             </div>
         </div>
-        <div className="grid grid-cols-1 gap-6 lg:pl-52 lg:pr-52 md:grid-cols-4 mx-auto text-center justify-items-center lg:pt-20 pt-5 pb-5"> 
+        {/* <div className="grid grid-cols-1 gap-6 lg:pl-52 lg:pr-52 md:grid-cols-4 mx-auto text-center justify-items-center lg:pt-20 pt-5 pb-5"> 
             <div className='border rounded-xl p-10 scale-105 bg-green-100 shadow-xl'>
                 <h1 className='font-bold text-3xl text-green-400'>201+</h1>
                 <p>UNIVERSITIES TIED</p>
@@ -90,7 +90,7 @@ function PopularCountriesImages() {
                 <h1 className='font-bold text-3xl text-yellow-500'>98%</h1>
                 <p>VISA ACCEPTANCE</p>
             </div>
-        </div>
+        </div> */}
 
     </div>
   )

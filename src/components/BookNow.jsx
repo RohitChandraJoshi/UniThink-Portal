@@ -117,8 +117,9 @@ function BookNow() {
     return (
         <div className="bg-[#F0F4F6]">
 <div className="relative">
-  <img src={student} alt="UniThink and Boundless Learning" className="absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 max-w-xs md:max-w-full" />
+  <img src={student} alt="UniThink and Boundless Learning" className="absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 max-w-xs md:max-w-full hidden md:block" />
 </div>
+
 
 
 
@@ -182,12 +183,12 @@ function BookNow() {
     </Link>
                             </div>
                             <div className="container mx-auto flex justify-center">
-  <div className="grid grid-cols-1 gap-10 lg:px-2 md:grid-cols-2 lg:grid-cols-3 text-center">
+  <div className="z -10 grid grid-cols-1 gap-10 lg:px-2 md:grid-cols-2 lg:grid-cols-3 text-center">
     <div className="border rounded-lg p-6 bg-gradient-to-r from-red-200 to-red-100 shadow-md w-50 h-30 flex flex-col justify-center items-center">
       <h1 className="font-bold text-3xl text-red-600">{statistics.coursesAvailable}+</h1>
       <p className="text-gray-700">Years of Career Counselling</p>
     </div>
-    <div className="border rounded-lg p-6 bg-gradient-to-r from-green-200 to-green-100 shadow-md w-50 h-30 flex flex-col justify-center items-center">
+    <div className="z -10 border rounded-lg p-6 bg-gradient-to-r from-green-200 to-green-100 shadow-md w-50 h-30 flex flex-col justify-center items-center">
       <h1 className="font-bold text-3xl text-green-600">{statistics.universitiesTied}+</h1>
       <p className="text-gray-700">Partner Universities</p>
     </div>
@@ -216,7 +217,7 @@ function BookNow() {
                     {/* right side form */}
                     <div className=" lg:w-2/3 w-full flex flex-col justify-top mt-8 md:mx-4 px-2"> {/* Changed width to lg:w-2/3 */}
                     <div className='p-5 bg-gray-200 border rounded-2xl shadow-lg shadow-2xl mb-4'>
-                            <p className='text-lg justify-center text-center md:text-left'>Free Counselling & Guidance</p>
+                            <p className='text-lg justify-center text-center md:text-left'>Book Free Counselling & Guidance</p>
                             <form onSubmit={handleSubmit} className="flex flex-col gap-3"> {/* Adjusted gap */}
                                 <div>
                                     <Label value='Name*' />
@@ -327,7 +328,7 @@ function BookNow() {
                                         className="mr-2"
                                     />
                                     <label htmlFor="agreeTerms" className="text-sm">
-                                        I agree to Unithink Terms<a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="#" className="text-blue-500">privacy policy</a>
+                                        I agree to Unithink Terms<a href="terms" className="text-blue-500" >UniThink Terms</a> and <a href="privacypolicy" className="text-blue-500">privacy policy</a>
                                     </label>
 
                                 </div>

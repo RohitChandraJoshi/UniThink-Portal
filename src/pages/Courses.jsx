@@ -8,6 +8,7 @@ import uk from '../assets/uk.jpg'
 import { Label, TextInput, Button, Select, Checkbox } from 'flowbite-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import comingsoon from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/comingsoon.jpg'
 
 function Courses() {
   const [countries, setCountries] = useState([]);
@@ -57,7 +58,7 @@ function Courses() {
               </h1>
             </div>
           
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
+          {/* <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
             {countries && countries.map((country) =>(
               <div key={country._id} className="p-2 pb-10">
                 <Link to={`/countrydetail/${country.c_id}`}>
@@ -75,7 +76,10 @@ function Courses() {
                 </Link>
               </div>
             ))}
-          </div>
+          </div> */}
+          <div className="relative">
+  <img src={comingsoon} alt="coming soon" className="p-10 justify-center" />
+</div>
         </>
       )}
     </div>

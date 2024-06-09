@@ -18,6 +18,8 @@ import Counselling from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client
 import Business from './pages/Business'
 import Skilling from './pages/Skilling'
 import University from './pages/University'
+import PrivacyPolicy from './pages/policy'
+import Disclaimer from './pages/Disclaimer'
 
 function App() {
   return (
@@ -35,10 +37,12 @@ function App() {
         <Route path='/community' element={<Community/>}/>
         <Route path='/booking' element={<Booking/>}/>
         <Route path='/terms' element={<Terms/>}/>
+        <Route path='/disclaimer' element={<Disclaimer/>}/>
         <Route path='/courses' element={<Courses/>}/>
         <Route path='/skilling' element={<Skilling/>}/>
         <Route path='/university' element={<University/>}/>
         <Route path='/business' element={<Business/>}/>
+        <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
         <Route path='/countrydetail/:countryid' element={<CountryDetails />} />
        
       

@@ -6,42 +6,34 @@ function FooterCom() {
   return (
     <Footer bgLight>
       <div className="w-full bg-white to-amber-100 ">
-        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4 mx-auto justify-items-center">
+        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-3 mx-auto justify-items-center">
           <div>
             <Footer.Title title="Company" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">About</Footer.Link>
-              <Footer.Link href="#">Careers</Footer.Link>
-              <Footer.Link href="#">Brand Center</Footer.Link>
-              <Footer.Link href="#">Blog</Footer.Link>
+              <Footer.Link href="about">About</Footer.Link>
+              <Footer.Link href="booking">Book Now</Footer.Link>
+              <Footer.Link href="countries">Countries</Footer.Link>
+              <Footer.Link href="courses">Courses</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>
             <Footer.Title title="help center" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">Discord Server</Footer.Link>
-              <Footer.Link href="#">Twitter</Footer.Link>
-              <Footer.Link href="#">Facebook</Footer.Link>
-              <Footer.Link href="#">Contact Us</Footer.Link>
+              <Footer.Link href="https://twitter.com/sheelanmisra">Twitter</Footer.Link>
+              <Footer.Link href="https://wa.me/message/H6GTSW5G5WWTK1 ">whatsapp</Footer.Link>
+              <Footer.Link href="https://www.facebook.com/profile.php?id=61560487778564">Facebook</Footer.Link>
+              <Footer.Link href="contact">Contact Us</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>
             <Footer.Title title="legal" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">Privacy Policy</Footer.Link>
-              <Footer.Link href="#">Licensing</Footer.Link>
-              <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+              <Footer.Link href="/privacypolicy">Privacy Policy</Footer.Link>
+              <Footer.Link href="/terms">Terms &amp; Conditions</Footer.Link>
+              <Footer.Link href="/disclaimer">Disclaimer</Footer.Link>
             </Footer.LinkGroup>
           </div>
-          <div>
-            <Footer.Title title="download" />
-            <Footer.LinkGroup col>
-              <Footer.Link href="#">iOS</Footer.Link>
-              <Footer.Link href="#">Android</Footer.Link>
-              <Footer.Link href="#">Windows</Footer.Link>
-              <Footer.Link href="#">MacOS</Footer.Link>
-            </Footer.LinkGroup>
-          </div>
+          
         </div>
         <div className=" px-4 py-6 justify-items-center mx-auto">
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center pb-5">

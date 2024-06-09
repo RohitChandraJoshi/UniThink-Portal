@@ -3,7 +3,7 @@ import aboutus from '../assets/aboutus.png'
 import aboutusperson from '../assets/aboutusperson1.png'
 import { BsCheck2All } from "react-icons/bs";
 import aboutshape from '../assets/about-shape-2.svg'
-
+import Quiz from './Quiz';
 
 function AboutUs() {
     
@@ -13,8 +13,8 @@ function AboutUs() {
             <div>
                 <div style={{ backgroundImage: `url(${aboutus})` }} className='bg-left bg-no-repeat'>
                     <div className="relative mx-auto flex max-w-5xl flex-col md:flex-row md:items-center sm:gap-2 p-2">
-                        <img src={aboutusperson} alt="" className='max-h-96 mx-auto rounded-xl '/>
-                        <img src={aboutshape} alt="" className="hidden sm:block absolute -bottom-20 -left-28 " style={{ zIndex: 2 }} />
+                        
+                        <Quiz />
                         <div className='p-16'>
                           
                             <p className=" text-gray-400 font-semibold">ABOUT US</p>

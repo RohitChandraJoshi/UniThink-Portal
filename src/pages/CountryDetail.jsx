@@ -12,7 +12,7 @@ function CountryDetails() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Smooth scrolling behavior
+      behavior: 'smooth' 
     });
   };
   const { countryid } = useParams();
@@ -23,7 +23,7 @@ function CountryDetails() {
     const fetchCountryDetails = async () => {
       try {
         const response = await axios.get(`https://unithink-corp.onrender.com/api/specCountry/${countryid}`);
-        setCountryDetails(response.data[0]); // Assuming the response is an array with one object
+        setCountryDetails(response.data[0]); 
       } catch (error) {
         console.error('Error fetching country details:', error);
       }

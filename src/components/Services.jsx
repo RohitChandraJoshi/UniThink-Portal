@@ -39,7 +39,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Career Guidance</h2>
-                      <p className="text-sm text-gray-200">Offering personalized counseling to help students explore their interests, strengths, and potential career paths, guiding them towards fulfilling professional futures.</p>
+                      <p className="text-sm text-white">Offering personalized counseling to help students explore their interests, strengths, and potential career paths, guiding them towards fulfilling professional futures.</p>
                     </div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">University Selection</h2>
-                      <p className="text-sm text-gray-200">Assisting students in identifying the most suitable universities based on their academic background, interests, and career goals.</p>
+                      <p className="text-sm text-white">Assisting students in identifying the most suitable universities based on their academic background, interests, and career goals.</p>
                     </div>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Admission Assistance</h2>
-                      <p className="text-sm text-gray-200">Providing guidance and support throughout the university application process, including application strategy, documentation, and submission.</p>
+                      <p className="text-sm text-white">Providing guidance and support throughout the university application process, including application strategy, documentation, and submission.</p>
                     </div>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Visa Guidance</h2>
-                      <p className="text-sm text-gray-200">Assisting students with visa application procedures, documentation requirements, and interview preparation to facilitate a smooth transition to their chosen study destination.</p>
+                      <p className="text-sm text-white">Assisting students with visa application procedures, documentation requirements, and interview preparation to facilitate a smooth transition to their chosen study destination.</p>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Scholarship Support</h2>
-                      <p className="text-sm text-gray-200">Helping students explore scholarship opportunities and providing guidance on application procedures to secure financial assistance for their education.</p>
+                      <p className="text-sm text-white">Helping students explore scholarship opportunities and providing guidance on application procedures to secure financial assistance for their education.</p>
                     </div>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Immigration Assistance</h2>
-                      <p className="text-sm text-gray-200">Supporting students with immigration processes, including residency permits, work permits, and other legal requirements associated with studying abroad.</p>
+                      <p className="text-sm text-white">Supporting students with immigration processes, including residency permits, work permits, and other legal requirements associated with studying abroad.</p>
                     </div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Test Preparation</h2>
-                      <p className="text-sm text-gray-200">Offering resources and guidance for standardized tests such as the SAT, ACT, GRE, GMAT, TOEFL, and IELTS to help students achieve their desired scores.</p>
+                      <p className="text-sm text-white">Offering resources and guidance for standardized tests such as the SAT, ACT, GRE, GMAT, TOEFL, and IELTS to help students achieve their desired scores.</p>
                     </div>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Application Review</h2>
-                      <p className="text-sm text-gray-200">Reviewing and providing feedback on students' application materials, including personal statements, essays, and resumes, to enhance their chances of acceptance.</p>
+                      <p className="text-sm text-white">Reviewing and providing feedback on students' application materials, including personal statements, essays, and resumes, to enhance their chances of acceptance.</p>
                     </div>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Alumni Network</h2>
-                      <p className="text-sm text-gray-200">Connecting students with alumni networks and resources to facilitate networking opportunities and career development.</p>
+                      <p className="text-sm text-white">Connecting students with alumni networks and resources to facilitate networking opportunities and career development.</p>
                     </div>
                   </div>
                 </div>
@@ -143,12 +143,12 @@ const Services = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="text-lg font-semibold">Post-Admission Support</h2>
-                      <p className="text-sm text-gray-200">Providing ongoing support to students even after admission, including orientation assistance, academic advising, and adjustment support.</p>
+                      <p className="text-sm text-white">Providing ongoing support to students even after admission, including orientation assistance, academic advising, and adjustment support.</p>
                     </div>
                   </div>
                 </div>
               </div>
-            {/* Detailed Points */}
+           
            
           </div>
         </div>

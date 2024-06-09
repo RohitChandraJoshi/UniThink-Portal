@@ -22,6 +22,7 @@ import university from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/
 import { HiArrowCircleRight } from "react-icons/hi";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import comingsoon from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/comingsoon.jpg'
 
 const Business = () => {
     const [errorMessage, setErrorMessage] = useState(null);
@@ -114,7 +115,7 @@ const Business = () => {
                             </div>
         <div className="sttt">
               <h1 className='mb-4 font-bold text-3xl md:text-3xl lg:text-4xl text-black relative flex flex-col items-center'>
-                <span className='mt-10'>Achieve Your Dreams: Free Education & Career Counselling</span>
+                <span className='mt-10'>Education & Business Counsultancy</span>
                 <span className='relative mt-2'>
                   <span className='h-1 bg-orange-500 w-20 block'></span>
                 </span>
@@ -140,154 +141,10 @@ const Business = () => {
     </div>
   </div>
 </div>
-<div className="flex justify-center items-center min-h-screen">
-<div className="lg:w-2/4 w-full flex flex-col justify-top items-center  md:mx-4 px-2 mx-auto">
-                    <div className='p-5 bg-gray-200 border rounded-2xl shadow-lg shadow-2xl mb-4'>
-                            <p className='text-lg text-center md:text-left'>Book a session now! Don't worry! We won't charge you for anything...</p>
-                            <form onSubmit={handleSubmit} className="flex flex-col gap-3"> {/* Adjusted gap */}
-                                <div>
-                                    <Label value='Name*' />
-                                    <TextInput
-                                        type='text'
-                                        placeholder='Enter your name'
-                                        id='name'
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    />
-                                </div>
-                                <div>
-                                    <Label value='Email*' />
-                                    <TextInput
-                                        type='email'
-                                        placeholder='Enter your email'
-                                        id='email'
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        rightIcon={HiMail}
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    />
-                                </div>
-                                <div>
-                                    <Label value='Phone*' />
-                                    <TextInput
-                                        type='number'
-                                        placeholder='Enter your number'
-                                        id='phonenumber'
-                                        value={formData.phonenumber}
-                                        onChange={handleChange}
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    />
-                                </div>
-                                <div>
-                                    <Label value='Service Type*' />
-                                    <Select
-                                        id="serviceType"
-                                        value={formData.serviceType}
-                                        onChange={handleChange}
-                                        required
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    >
-                                         <option value="Education & Career Counselling">Education & Career Counselling</option>
-                        
-                                       
-                                        <option value="Find Your University & Course ">Find Your University & Course </option>
-                                        <option value="Skilling Academy ">Skilling Academy </option>
-                                        <option value="Education & Business Counsultancy">Education & Business Counsultancy</option>
-                                      
-                                        
-                                    </Select>
-                                </div>
-                                {/* <div>
-                                    <Label value='When do you plan to study*' />
-                                    <Select
-                                        id="studyPlan"
-                                        value={formData.studyPlan}
-                                        onChange={handleChange}
-                                        required
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    >
-                                        <option value="">Select Plan</option>
-                                        
-                                    </Select>
-                                </div> */}
-                                {/* <div>
-                                    <Label value='How would you fund your education?*' />
-                                    <Select
-                                        id="fundSource"
-                                        value={formData.fundSource}
-                                        onChange={handleChange}
-                                        required
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    >
-                                        <option value="">Select Fund Source</option>
-                                        <option value="Self Funded">Self Funded</option>
-                                        <option value="Parents">Parents</option>
-                                        <option value="Seeking Scholarship">Seeking Scholarship</option>
-                                        <option value="Bank Loan">Bank Loan</option>
-                                    </Select>
-                                </div> */}
-                                {/* <div>
-                                    <Label htmlFor="studyLevel" value="Preferred Study Level*" />
-                                    <Select
-                                        id="studyLevel"
-                                        value={formData.studyLevel}
-                                        onChange={handleChange}
-                                        required
-                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    >
-                                        <option value="">Select Study Level</option>
-                                        <option value="Post Graduate">Post Graduate</option>
-                                        <option value="Undergraduate">Undergraduate</option>
-                                        <option value="Vocational">Vocational</option>
-                                        <option value="Doctorate">Doctorate</option>
-                                    </Select>
-                                </div> */}
-                                {/* Additional Checkboxes */}
-                                <label htmlFor="receiveUpdates" className="text-sm">
-                                    UniThink will not share your details with others without your permission:
-                                </label>
-                                <div className="flex items-center">
-                                    <Checkbox
-                                        id="agreeTerms"
-                                        checked={formData.agreeTerms}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <label htmlFor="agreeTerms" className="text-sm">
-                                        I agree to Unithink Terms<a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="#" className="text-blue-500">privacy policy</a>
-                                    </label>
+<div className="relative">
+  <img src={comingsoon} alt="coming soon" className="p-10 justify-center" />
+</div>
 
-                                </div>
-                                <div className="flex items-center">
-                                    <Checkbox
-                                        id="contactPreference"
-                                        checked={formData.contactPreference}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <label htmlFor="contactPreference" className="text-sm">
-                                        Please contact me by phone, email or SMS to assist with my enquiry
-                                    </label>
-                                </div>
-                                <div className="flex items-center">
-                                    <Checkbox
-                                        id="receiveUpdates"
-                                        checked={formData.receiveUpdates}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <label htmlFor="receiveUpdates" className="text-sm">
-                                        I would like to receive updates and offers from UniThink
-                                    </label>
-                                </div>
-                                {/* End of Additional Checkboxes */}
-                                <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
-                            </form>
-                        </div>
-                        
-                    </div>
-                    </div>
     </div>
   );
 };

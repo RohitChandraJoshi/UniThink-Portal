@@ -22,6 +22,9 @@ import service8 from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/sr
 import service9 from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/service9.png";
 import service10 from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/service10.png";
 import who from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/who.jpg";
+import vision from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/vision.png";
+import mission from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/mission.png";
+import UEI from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/UEI.png";
 
 
 function About() {
@@ -119,7 +122,7 @@ function About() {
             </h1>
           </div>
           <div className="discover">
-            <p className="w-full lg:pt-10 lg:pb-3 lg:text-base text-[10px] pt-3 text-center text-gray-900">UEI: Bridging education and business realms, fostering collaboration for optimized processes and resource development."</p>
+            <p className="w-full lg:pt-10 lg:pb-3 lg:text-base text-[40px] pt-3 text-center text-gray-1000">UEI: Bridging education and business realms, fostering collaboration for optimized processes and resource development."</p>
           </div>
           <Link to='/booking'>
             <Button size="xl" outline pill gradientDuoTone="pinkToOrange" className="text-xs z-10" onClick={scrollToTop}>Meet us at</Button>
@@ -154,34 +157,84 @@ function About() {
 
       {/* Vision */}
       <div className="w-full mx-auto mt-10">
-        <div className="w-1/2 border-b border-black mx-auto">
-          <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">vision</h1>
-        </div>
-        <div className="w-11/12 mx-auto mt-5">
-          <p className="lg:text-lg md:text-base text-sm text-center text-neutral-700 font-medium leading-relaxed">
-            Unithink Education International's vision is to serve as your lifelong global education companion and career mentor, guiding you through every stage of your educational journey and professional development.
-          </p>
-        </div>
+  {/* heading */}
+  <div className="w-1/2 border-b border-black mx-auto">
+    <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">Vision</h1>
+  </div>
+  <div className="w-11/12 mx-auto mt-5">
+    <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="md:w-1/3">
+        <img
+          src={vision}
+          alt="Unithink Education International"
+          className="w-full h-full object-cover"
+        />
       </div>
+      <div className="md:w-2/3 p-6">
+        <p className="lg:text-lg md:text-base text-sm text-center md:text-left text-neutral-700 font-medium leading-relaxed">
+        Unithink Education International's vision is to serve as your lifelong global education companion and career mentor, guiding you through every stage of your educational journey and professional development.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Mission */}
       <div className="w-full mx-auto mt-10">
-        <div className="w-1/2 border-b border-black mx-auto">
-          <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">mission</h1>
-        </div>
-        <div className="w-11/12 mx-auto mt-5">
-          <p className="lg:text-lg md:text-base text-sm text-center text-neutral-700 font-medium leading-relaxed">
-            Unithink Education International is dedicated to empowering students globally through a range of educational support services. Our mission is to facilitate university selection, offer admissions assistance, and provide career guidance, enabling students to navigate the complexities of the education landscape confidently. We aim to equip students with the tools and resources they need to achieve their academic and professional aspirations, wherever they may be in the world.
-          </p>
-        </div>
+  {/* heading */}
+  <div className="w-1/2 border-b border-black mx-auto">
+    <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">Mission</h1>
+  </div>
+  <div className="w-11/12 mx-auto mt-5">
+    <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="md:w-1/3">
+        <img
+          src={mission}
+          alt="Unithink Education International"
+          className="w-full h-full object-cover"
+        />
       </div>
+      <div className="md:w-2/3 p-6">
+        <p className="lg:text-lg md:text-base text-sm text-center md:text-left text-neutral-700 font-medium leading-relaxed">
+        Unithink Education International is dedicated to empowering students globally through a range of educational support services. Our mission is to facilitate university selection, offer admissions assistance, and provide career guidance, enabling students to navigate the complexities of the education landscape confidently. We aim to equip students with the tools and resources they need to achieve their academic and professional aspirations, wherever they may be in the world.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div className="w-full mx-auto mt-10">
+  {/* heading */}
+  <div className="w-1/2 border-b border-black mx-auto">
+    <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">UEI ENVISIONS</h1>
+  </div>
+  <div className="w-11/12 mx-auto mt-5">
+    <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="md:w-1/3">
+        <img
+          src={UEI}
+          alt="Unithink Education International"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="md:w-2/3 p-6">
+      <ul className="w-full list-disc p-2">
+            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Global Leadership:</span> Being a global leader in empowering individuals for unparalleled career growth.</li>
+            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Seamless Integration:</span> Seamlessly integrating tailored education choices with unique cultural identities and personal aspirations.</li>
+            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Executive Development Catalyst:</span> Catalyzing professionals at all levels for personal growth and organizational success.</li>
+            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Innovation and Transformation:</span> Leading continuous innovation and positive transformations in education and business.</li>
+            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Collaborative Excellence:</span> Creating a world where education and business collaborate seamlessly, contributing to global excellence.</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Services Offered */}
       <div className="w-full mx-auto mt-10">
         <div className="w-1/2 border-b border-black mx-auto">
           <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">services offered</h1>
         </div>
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"> 
               {/* Service 1 */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
                 <div className="relative overflow-hidden">
@@ -302,20 +355,6 @@ function About() {
       </div>
 
       {/* VISIONS */}
-      <div className="w-full mx-auto mt-10">
-        <div className="w-1/2 border-b border-black mx-auto">
-          <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">UEI Envisions</h1>
-        </div>
-        <div className="w-11/12 mx-auto mt-7">
-          <ul className="w-full list-disc p-2">
-            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Global Leadership:</span> Being a global leader in empowering individuals for unparalleled career growth.</li>
-            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Seamless Integration:</span> Seamlessly integrating tailored education choices with unique cultural identities and personal aspirations.</li>
-            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Executive Development Catalyst:</span> Catalyzing professionals at all levels for personal growth and organizational success.</li>
-            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Innovation and Transformation:</span> Leading continuous innovation and positive transformations in education and business.</li>
-            <li className="lg:text-lg text-sm text-neutral-700 font-medium"><span className="font-bold">Collaborative Excellence:</span> Creating a world where education and business collaborate seamlessly, contributing to global excellence.</li>
-          </ul>
-        </div>
-      </div>
 
       {/* FOUNDER */}
       {/* <div className="w-full mx-auto lg:mt-10 my-5">
@@ -335,7 +374,7 @@ function About() {
       </div> */}
 
       {/* form */}
-      <div className='p-5 bg-gray-200 to-amber-100 border rounded-2xl shadow-lg lg:mx-96 md:mx-28 sm:mx-10 mb-10'>
+      <div className='mt-10 p-5 bg-gray-200 to-amber-100 border rounded-2xl shadow-lg lg:mx-96 md:mx-28 sm:mx-10 mb-10'>
         <p className='text-lg text-center md:text-left'>Book a session now! Dw! We won't charge you for anything...</p>
         <form onSubmit={handleSubmit} className="flex flex-col gap-3"> {/* Adjusted gap */}
           <div>
@@ -373,25 +412,24 @@ function About() {
             />
           </div>
           <div>
-            <Label value='Preferred Study Destination*' />
-            <Select
-              id="studyDestination"
-              value={formData.studyDestination}
-              onChange={handleChange}
-              required
-              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-            >
-              <option value="">Select Destination</option>
-              <option value="Germany">Germany</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="Australia">Australia</option>
-              <option value="France">France</option>
-              <option value="United States of America">United States of America</option>
-              <option value="United Arab Emirates">United Arab Emirates</option>
-              <option value="Canada">Canada</option>
-            </Select>
-          </div>
-          <div>
+                                    <Label value='Service Type*' />
+                                    <Select
+                                        id="serviceType"
+                                        value={formData.serviceType}
+                                        onChange={handleChange}
+                                        required
+                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                    >
+                                        <option value="">Select Service Type</option>
+                                        <option value="Education & Career Counselling">Education & Career Counselling</option>
+                                        <option value="Find Your University & Course ">Find Your University & Course </option>
+                                        <option value="Skilling Academy ">Skilling Academy </option>
+                                        <option value="Education & Business Counsultancy">Education & Business Counsultancy</option>
+                                      
+                                        
+                                    </Select>
+                                </div>
+          {/* <div>
             <Label value='When do you plan to study*' />
             <Select
               id="studyPlan"
@@ -401,7 +439,7 @@ function About() {
               className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
               <option value="">Select Plan</option>
-              {/* Add 24 options like June 2024, July 2024, ... */}
+             
             </Select>
           </div>
           <div>
@@ -435,7 +473,7 @@ function About() {
               <option value="Vocational">Vocational</option>
               <option value="Doctorate">Doctorate</option>
             </Select>
-          </div>
+          </div> */}
           {/* Additional Checkboxes */}
           <label htmlFor="receiveUpdates" className="text-sm">
             UniThink will not share your details with others without your permission:
@@ -448,7 +486,7 @@ function About() {
               className="mr-2"
             />
             <label htmlFor="agreeTerms" className="text-sm">
-              I agree to Unithink Terms <a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="#" className="text-blue-500">privacy policy</a>
+              I agree to Unithink Terms <a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="/privacypolicy" className="text-blue-500">privacy policy</a>
             </label>
           </div>
           <div className="flex items-center">

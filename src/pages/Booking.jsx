@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import aboutusperson from '../assets/aboutusperson.jpg';
-import boardmeet from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/pexels-expressivestanley-14543601.jpg';
-import { Label, TextInput, Button, Alert, Select } from 'flowbite-react';
-import { useState, useEffect } from 'react';
+import boardmeet from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/pexels-expressivestanley-1454360.jpg';
+import { Label, TextInput, Button, Select, Checkbox } from 'flowbite-react';
 import axios from 'axios';
-import { HiMail, HiOutlineLocationMarker, HiOutlinePhone } from 'react-icons/hi'; // Import icons
+import { HiMail, HiOutlineLocationMarker, HiOutlinePhone } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/Booking.css'
+import 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/Booking.css';
 import { Footer } from 'flowbite-react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs';
+import { BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-function Booking() {
+
+function Contact() {
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -25,7 +28,7 @@ function Booking() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.country || !formData.phonenumber || !formData.degree) {
+    if (!formData.name || !formData.email || !formData.country || !formData.phonenumber || !formData.studyDestination || !formData.studyPlan || !formData.fundSource || !formData.studyLevel) {
       return setErrorMessage('Please fill all the details');
     }
     try {
@@ -40,7 +43,13 @@ function Booking() {
         email: '',
         country: '',
         phonenumber: '',
-        degree: ''
+        studyDestination: '',
+        studyPlan: '',
+        fundSource: '',
+        studyLevel: '',
+        agreeTerms: false,
+        contactPreference: false,
+        receiveUpdates: false
       });
       setErrorMessage(null);
     } catch (error) {
@@ -51,98 +60,217 @@ function Booking() {
     }
   };
 
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
+    const { id, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [id]: type === 'checkbox' ? checked : value
+    });
+  }
 
   return (
-    <div className='flex relative'>
-      <div className='background-image absolute inset-0 bg-cover bg-center' style={{ backgroundImage: `url(${boardmeet})`, opacity: '0.5', backgroundBlendMode: 'multiply' }}></div>
-      <div className='w-full md:w-2/3'>
-        <div className='mx-auto justify-items-center'>
-          <div className='mx-auto text-center'>
+    <div className="flex flex-col md:flex-row relative">
+            <div className="mt-10">
+                            <Link to='https://wa.me/message/H6GTSW5G5WWTK1' target="_blank" rel="noopener noreferrer" >
+        <button
+            className="fixed bottom-4 right-4 z-50 bg-green-500 text-white py-3 px-6 hover:bg-green-600 flex items-center rounded-lg shadow-lg"
+            
+        >
+            <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
+            Chat with Us!
+        </button>
+    </Link>
+                            </div>
+<div className='background-image absolute inset-0 bg-cover bg-center pointer-events-none' style={{ backgroundImage: `url(${boardmeet})`, opacity: '0.5', backgroundBlendMode: 'multiply' }}></div>
+      <div className="flex flex-col md:w-2/3 p-4">
+        <div className="mx-auto justify-items-center">
+          <div className="mx-auto text-center">
             <div className="sttt">
-              <h1 className='font-bold text-3xl md:text-4xl lg:text-4xl text-black relative flex flex-col items-center'>
-                <span className='mt-10'>REQUEST FREE CONSULTATION</span>
-                <span className='relative mt-2'>
-                  <span className='h-1 bg-orange-500 w-20 block'></span>
+              <h1 className="font-bold text-3xl md:text-4xl lg:text-4xl text-black relative flex flex-col items-center">
+                <span className="mt-10">REQUEST FREE CONSULTATION</span>
+                <span className="relative mt-2">
+                  <span className="h-1 bg-orange-500 w-20 block"></span>
                 </span>
               </h1>
             </div>
           </div>
-          <div className='md:p-5 lg:p-8 mx-3 sm:mx-auto lg:mx-auto max-w-md md:max-w-lg lg:max-w-3xl mb-10'>
-            <div className='discover' >
-              <p className='text-base md:text-lg text-center md:text-left'>Book a session now! Don't worry, we won't charge you for anything...</p>
+          <div className="md:p-5 lg:p-8 mx-3 sm:mx-auto lg:mx-auto max-w-md md:max-w-lg lg:max-w-3xl mb-10" style={{ zIndex: '1' }}>
+            <div className="discover">
+              <p className="text-base md:text-lg text-center md:text-left">Book a session now! Don't worry, we won't charge you for anything...</p>
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <div>
-                <Label value='Name*' />
-                <TextInput
-                  type='text'
-                  placeholder='Enter your name'
-                  id='name'
-                  value={formData.name}
-                  onChange={handleChange} />
-              </div>
-              <div>
-                <Label value='Email*' />
-                <TextInput
-                  type='email'
-                  placeholder='Enter your email'
-                  id='email'
-                  value={formData.email}
-                  onChange={handleChange} rightIcon={HiMail} />
-              </div>
-              <div>
-                <Label value='Phone*' />
-                <TextInput
-                  type='number'
-                  placeholder='Enter your number'
-                  id='phonenumber'
-                  value={formData.phonenumber}
-                  onChange={handleChange} />
-              </div>
-              <div>
-                <Label htmlFor="degree" value="Select your degree*" />
-                <Select id="degree" value={formData.degree} onChange={handleChange} required>
-                  <option value="Masters">Masters</option>
-                  <option value="Bachelors">Bachelors</option>
-                  <option value="PhD">PhD</option>
-                </Select>
-              </div>
-              <div>
-                <Label value='Country*' />
-                <TextInput
-                  type='text'
-                  placeholder='Enter your preferred country'
-                  id='country'
-                  value={formData.country}
-                  onChange={handleChange} />
-              </div>
-              <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
+            <div>
+            <Label value='Name*' />
+            <TextInput
+              type='text'
+              placeholder='Enter your name'
+              id='name'
+              value={formData.name}
+              onChange={handleChange}
+              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <Label value='Email*' />
+            <TextInput
+              type='email'
+              placeholder='Enter your email'
+              id='email'
+              value={formData.email}
+              onChange={handleChange}
+              rightIcon={HiMail}
+              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <Label value='Phone*' />
+            <TextInput
+              type='number'
+              placeholder='Enter your number'
+              id='phonenumber'
+              value={formData.phonenumber}
+              onChange={handleChange}
+              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+                                    <Label value='Service Type*' />
+                                    <Select
+                                        id="serviceType"
+                                        value={formData.serviceType}
+                                        onChange={handleChange}
+                                        required
+                                        className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                    >
+                                        <option value="">Select Service Type</option>
+                                        <option value="Education & Career Counselling">Education & Career Counselling</option>
+                                        <option value="Find Your University & Course ">Find Your University & Course </option>
+                                        <option value="Skilling Academy ">Skilling Academy </option>
+                                        <option value="Education & Business Counsultancy">Education & Business Counsultancy</option>
+                                      
+                                        
+                                    </Select>
+                                </div>
+          {/* <div>
+            <Label value='When do you plan to study*' />
+            <Select
+              id="studyPlan"
+              value={formData.studyPlan}
+              onChange={handleChange}
+              required
+              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            >
+              <option value="">Select Plan</option>
+           
+            </Select>
+          </div>
+          <div>
+            <Label value='How would you fund your education?*' />
+            <Select
+              id="fundSource"
+              value={formData.fundSource}
+              onChange={handleChange}
+              required
+              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            >
+              <option value="">Select Fund Source</option>
+              <option value="Self Funded">Self Funded</option>
+              <option value="Parents">Parents</option>
+              <option value="Seeking Scholarship">Seeking Scholarship</option>
+              <option value="Bank Loan">Bank Loan</option>
+            </Select>
+          </div>
+          <div>
+            <Label htmlFor="studyLevel" value="Preferred Study Level*" />
+            <Select
+              id="studyLevel"
+              value={formData.studyLevel}
+              onChange={handleChange}
+              required
+              className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            >
+              <option value="">Select Study Level</option>
+              <option value="Post Graduate">Post Graduate</option>
+              <option value="Undergraduate">Undergraduate</option>
+              <option value="Vocational">Vocational</option>
+              <option value="Doctorate">Doctorate</option>
+            </Select>
+          </div> */}
+          
+          <label htmlFor="receiveUpdates" className="text-sm">
+            UniThink will not share your details with others without your permission:
+          </label>
+          <div className="flex items-center">
+            <Checkbox
+              id="agreeTerms"
+              checked={formData.agreeTerms}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="agreeTerms" className="text-sm">
+              I agree to Unithink Terms <a href="terms" className="text-blue-500">UniThink Terms</a> and <a href="#" className="text-blue-500">privacy policy</a>
+            </label>
+          </div>
+          <div className="flex items-center">
+            <Checkbox
+              id="contactPreference"
+              checked={formData.contactPreference}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="contactPreference" className="text-sm">
+              Please contact me by phone, email or SMS to assist with my enquiry
+            </label>
+          </div>
+          <div className="flex items-center">
+            <Checkbox
+              id="receiveUpdates"
+              checked={formData.receiveUpdates}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="receiveUpdates" className="text-sm">
+              I would like to receive updates and offers from UniThink
+            </label>
+          </div>
+          {/* End of Additional Checkboxes */}
+          <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
             </form>
           </div>
         </div>
+       
       </div>
-      <div className='w-full md:w-1/3 p-4' style={{ zIndex: '1' }}>
-        <div className='contact-box'>
-          <h2 className='font-bold'>GET IN TOUCH</h2>
-          <p className="slogan">Connect with UniThink Education International for an initial consultation with our experts. We delve into the specifics of your situation to provide you with tailored solutions and present the best options available. Just a minute of your time is all it takes. Expect a prompt response as we prioritize your needs and strive to deliver excellence.</p>
+      <div className="md:w-2/4 p-4" style={{ zIndex: '1' }}>
+  <div className='contact-box'>
+    <h2 className='font-bold'>GET IN TOUCH</h2>
+    <p className="slogan">Connect with UniThink Education International for an initial consultation with our experts. We delve into the specifics of your situation to provide you with tailored solutions and present the best options available. Just a minute of your time is all it takes. Expect a prompt response as we prioritize your needs and strive to deliver excellence.</p>
 
-          <div className="contact-details">
-            <p style={{ fontWeight: 'bold' }} ><HiOutlinePhone /> +9900911649 <br /> +9663514338 </p>
-            <p ><HiOutlineLocationMarker /> 305, Tropical Terrace, Basavanagar, <br /> Doddanekkundi, Bangalore North, Bangalore- <br /> 560037, Karnataka</p>
-            <p style={{ fontWeight: 'bold' }} ><HiMail /> sheelan@unithink.in</p>
-          </div>
-          <div className="social-icons">
-            <Footer.Icon href="https://www.linkedin.com/in/sheelan-misra/" target="_blank" rel="noopener noreferrer" icon={BsLinkedin} />
-            <Footer.Icon href="https://www.instagram.com/unithink.in?igsh=MWY3eXUybzBvazczaQ==" target="_blank" rel="noopener noreferrer" icon={BsInstagram} />
-            <Footer.Icon href="https://twitter.com/sheelanmisra" target="_blank" rel="noopener noreferrer" icon={BsTwitter} />
-          </div>
-        </div>
-      </div>
+    <div className="contact-details">
+      <p style={{ fontWeight: 'bold' }}><HiOutlinePhone /> +9900911649 <br /> +9663514338 </p>
+      <p><HiOutlineLocationMarker /> 305, Tropical Terrace, Basavanagar, <br /> Doddanekkundi, Bangalore North, Bangalore- <br /> 560037, Karnataka</p>
+      <p style={{ fontWeight: 'bold' }}><HiMail /> sheelan@unithink.in</p>
+    </div>
+    <div className="social-icons">
+      <Footer.Icon href="https://www.linkedin.com/in/sheelan-misra/" target="_blank" rel="noopener noreferrer" icon={BsLinkedin} />
+      <Footer.Icon href="https://www.instagram.com/unithink.in?igsh=MWY3eXUybzBvazczaQ==" target="_blank" rel="noopener noreferrer" icon={BsInstagram} />
+      <Footer.Icon href="https://twitter.com/sheelanmisra" target="_blank" rel="noopener noreferrer" icon={BsTwitter} />
+    </div>
+    <div className="map-container" style={{ marginTop: '20px' }}>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62248.94683766569!2d77.61011610400727!3d12.95627084641321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13e90e80ec43%3A0x24ff831fe145a8d6!2sBasavanagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1686435601234!5m2!1sen!2sin"
+        width="100%"
+        height="300"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }
 
-export default Booking;
+export default Contact;

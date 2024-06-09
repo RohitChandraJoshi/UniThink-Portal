@@ -7,15 +7,17 @@ import PopularCountriesImages from '../components/PopularCountriesImages'
 import Articles from '../components/Articles'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Services from '../components/Services'
 function Home() {
 
   return (
     <div className='overflow-x-hidden'>
         <ToastContainer/>
         <BookNow/>
-        <Intro/>
-        <Categories/>
+        {/* <Intro/> */}
+        <Services/>
+
+        {/* <Categories/> */}
         <AboutUs/>
         <PopularCountriesImages/>
         <Articles/>

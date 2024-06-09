@@ -1,6 +1,6 @@
 import React from 'react'
 import aboutus from '../assets/aboutus.png'
-import aboutusperson from '../assets/aboutusperson.jpg'
+import aboutusperson from '../assets/aboutusperson1.png'
 import { BsCheck2All } from "react-icons/bs";
 import aboutshape from '../assets/about-shape-2.svg'
 

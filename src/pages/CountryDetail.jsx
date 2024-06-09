@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { Label, TextInput, Button, Alert,Select } from 'flowbite-react';
 import Booking from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/Booking.jsx"
 import 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/CountryDetails.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 function CountryDetails() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -31,6 +34,17 @@ function CountryDetails() {
 
   return (
     <div className="container mx-auto px-4 py-8">
+            <div className="mt-10">
+                            <Link to='https://wa.me/message/H6GTSW5G5WWTK1' target="_blank" rel="noopener noreferrer" >
+        <button
+            className="fixed bottom-4 right-4 z-50 bg-green-500 text-white py-3 px-6 hover:bg-green-600 flex items-center rounded-lg shadow-lg"
+            
+        >
+            <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
+            Chat with Us!
+        </button>
+    </Link>
+                            </div>
       {countryDetails ? (
         <div>
           <h1 className="text-3xl font-bold mb-4">{countryDetails.c_name}</h1>

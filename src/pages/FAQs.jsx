@@ -5,6 +5,11 @@ import faqsimagebg from '../assets/faqs.png';
 import homebgsm from '../assets/homebgsm.png';
 import Logo from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/logo.jpg'; // Import your logo image
 import 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/CountryDetails.css'
+import { Label, TextInput, Button, Select, Checkbox } from 'flowbite-react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 function FAQs() {
 
@@ -26,6 +31,17 @@ function FAQs() {
 
   return (
     <div className='bg-white'>
+            <div className="mt-10">
+                            <Link to='https://wa.me/message/H6GTSW5G5WWTK1' target="_blank" rel="noopener noreferrer" >
+        <button
+            className="fixed bottom-4 right-4 z-50 bg-green-500 text-white py-3 px-6 hover:bg-green-600 flex items-center rounded-lg shadow-lg"
+            
+        >
+            <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
+            Chat with Us!
+        </button>
+    </Link>
+                            </div>
       {loading ? ( // Render logo with blinking effect while loading
         <div className="flex justify-center items-center h-screen">
 

@@ -11,7 +11,13 @@ import Countries from './pages/Countries'
 import FAQs from './pages/FAQs'
 import Community from './pages/Community'
 import Booking from './pages/Booking'
+import Terms from './pages/Terms'
+import Courses from './pages/Courses'
 import CountryDetails from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/CountryDetail.jsx'
+import Counselling from 'G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/pages/Counselling.jsx'
+import Business from './pages/Business'
+import Skilling from './pages/Skilling'
+import University from './pages/University'
 
 function App() {
   return (
@@ -23,10 +29,16 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/signup' element={<Signup/>}/>
+        <Route path='/counselling' element = {<Counselling/>}/>
         <Route path='/countries' element={<Countries/>}/>
         <Route path='/faqs' element={<FAQs/>}/>
         <Route path='/community' element={<Community/>}/>
         <Route path='/booking' element={<Booking/>}/>
+        <Route path='/terms' element={<Terms/>}/>
+        <Route path='/courses' element={<Courses/>}/>
+        <Route path='/skilling' element={<Skilling/>}/>
+        <Route path='/university' element={<University/>}/>
+        <Route path='/business' element={<Business/>}/>
         <Route path='/countrydetail/:countryid' element={<CountryDetails />} />
        
       

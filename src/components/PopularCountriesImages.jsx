@@ -29,39 +29,48 @@ function PopularCountriesImages() {
                 </div>
             </div>
             <div className='flex flex-wrap justify-center mt-5 mx-auto text-center gap-10 items-center lg:ml-12 ml-8 mr-9'  >
-                <div className=' w-full md:w-1/2 lg:w-1/3 xl:w-1/4  '>
-                    <div className=" max-w-100 mb-4" >
-                        <img src={usa} alt="" className=' rounded-xl hover:scale-105 shadow-xl' />
+                <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4'>
+                    <div className="relative max-w-100 mb-4 group">
+                        <img src={usa} alt="USA" className='rounded-xl shadow-xl w-full group-hover:blur-sm transition duration-300 ease-in-out' />
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-black bg-opacity-50 rounded-xl">
+                            <span className="text-white text-xl font-bold">USA</span>
+                        </div>
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-                    <div className="max-w-100 mb-4" >
-                        <img src={uk} alt="" className=' rounded-xl hover:scale-105 shadow-xl'/>
+                    <div className="relative max-w-100 mb-4 group">
+                        <img src={uk} alt="UK" className='rounded-xl shadow-xl w-full group-hover:blur-sm transition duration-300 ease-in-out' />
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-black bg-opacity-50 rounded-xl">
+                            <span className="text-white text-xl font-bold">UK</span>
+                        </div>
                     </div>
                 </div>
-                <div className=" w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-                    <div className="max-w-100">
-                        <img src={pp} alt="" className=' -translate-y-2.5  rounded-xl hover:scale-105 shadow-xl' />
+                <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+                    <div className="relative max-w-100 mb-4 group">
+                        <img src={pp} alt="Popular Place" className='rounded-xl shadow-xl w-full group-hover:blur-sm transition duration-300 ease-in-out' />
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-black bg-opacity-50 rounded-xl">
+                            <span className="text-white text-xl font-bold">France</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <Link to='/countries'>
-                <Button outline size='lg' onClick={scrollToTop}  gradientDuoTone="pinkToOrange" pill className='mx-auto justify-items-center mt-12 hover:scale-105' style={{ zIndex: 1, marginBottom: '60px' }}>Browse more Countries <HiArrowCircleRight size={25} /></Button>
+                <Button outline size='lg' onClick={scrollToTop} gradientDuoTone="pinkToOrange" pill className='mx-auto justify-items-center mt-12 hover:scale-105' style={{ zIndex: 1, marginBottom: '60px' }}>Browse more Countries <HiArrowCircleRight size={25} /></Button>
             </Link>
             <div className='mx-auto pt-10 mb-10 relative p-2' style={{ maxWidth: '100%', width: '800px' }}>
-            <img src={videoShape} alt="" className="hidden md:block absolute inset-0 w-full h-full rounded-3xl scale-150" style={{ zIndex: -1 }} />
-            <img src={videoShape2} alt="" className="absolute -top-10 -right-12" style={{ zIndex: 2 }} />
-            <iframe
-                width="100%"
-                height="450"
-                src="https://www.youtube.com/embed/fjvNz8u70bw?si=xP5LveJ-uiUa92xI"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loop
-                style={{ maxWidth: '100%', zIndex: 5 }}
-                className='rounded-3xl shadow-xl'
-            >
-            </iframe>
+                <img src={videoShape} alt="" className="hidden md:block absolute inset-0 w-full h-full rounded-3xl scale-150" style={{ zIndex: -1 }} />
+                <img src={videoShape2} alt="" className="absolute -top-10 -right-12" style={{ zIndex: 2 }} />
+                <iframe
+                    width="100%"
+                    height="450"
+                    src="https://www.youtube.com/embed/fjvNz8u70bw?si=xP5LveJ-uiUa92xI"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loop
+                    style={{ maxWidth: '100%', zIndex: 5 }}
+                    className='rounded-3xl shadow-xl'
+                >
+                </iframe>
             </div>
         </div>
         <div className="grid grid-cols-1 gap-6 lg:pl-52 lg:pr-52 md:grid-cols-4 mx-auto text-center justify-items-center lg:pt-20 pt-5 pb-5"> 

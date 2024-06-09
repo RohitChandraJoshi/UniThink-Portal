@@ -7,7 +7,7 @@
   padding: 5%; /* Padding */
   height: auto; /* Auto height */
   margin: 2%; /* Margin */
-  max-width: 450px; /* Max width */
+  max-width: 10000px; /* Max width */
   padding-bottom: 5%;
   margin-top: 7%;
   padding-top: 5%;
@@ -143,20 +143,20 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .sttt {
-    font-size: 6vw; /* Adjust font size for smaller screens */
+    font-size: 6vw; 
   }
 
   .contact-box {
-    margin: 5% auto; /* Center horizontally with increased margin */
+    margin: 5% auto; 
   }
 }
 
 @media (max-width: 480px) {
   .sttt {
-    font-size: 8vw; /* Adjust font size for smaller screens */
+    font-size: 8vw;
   }
 
   .contact-box {
-    max-width: 90%; /* Adjust max width for smaller screens */
+    max-width: 90%; 
   }
 }

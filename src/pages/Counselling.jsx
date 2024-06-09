@@ -34,7 +34,7 @@ import service8 from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/sr
 import service9 from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/service9.png";
 import service10 from "G:/Projects/Unithink/Unithink-main/Unithink-main/Client/src/assets/service10.png";
 
-const CareerCounsellingPage = () => {
+const Counselling = () => {
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -428,4 +428,4 @@ const CareerCounsellingPage = () => {
   );
 };
 
-export default CareerCounsellingPage;
+export default Counselling;
